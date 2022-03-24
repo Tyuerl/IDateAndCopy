@@ -1,0 +1,15 @@
+/Users/timurusupov/RiderProjects/IdateAndCopy/IdateAndCopy/bin/Debug/net6.0/IdateAndCopy
+/Users/timurusupov/RiderProjects/IdateAndCopy/IdateAndCopy/bin/Debug/net6.0/IdateAndCopy.deps.json
+/Users/timurusupov/RiderProjects/IdateAndCopy/IdateAndCopy/bin/Debug/net6.0/IdateAndCopy.runtimeconfig.json
+/Users/timurusupov/RiderProjects/IdateAndCopy/IdateAndCopy/bin/Debug/net6.0/IdateAndCopy.dll
+/Users/timurusupov/RiderProjects/IdateAndCopy/IdateAndCopy/bin/Debug/net6.0/IdateAndCopy.pdb
+/Users/timurusupov/RiderProjects/IdateAndCopy/IdateAndCopy/obj/Debug/net6.0/IdateAndCopy.csproj.AssemblyReference.cache
+/Users/timurusupov/RiderProjects/IdateAndCopy/IdateAndCopy/obj/Debug/net6.0/IdateAndCopy.GeneratedMSBuildEditorConfig.editorconfig
+/Users/timurusupov/RiderProjects/IdateAndCopy/IdateAndCopy/obj/Debug/net6.0/IdateAndCopy.AssemblyInfoInputs.cache
+/Users/timurusupov/RiderProjects/IdateAndCopy/IdateAndCopy/obj/Debug/net6.0/IdateAndCopy.AssemblyInfo.cs
+/Users/timurusupov/RiderProjects/IdateAndCopy/IdateAndCopy/obj/Debug/net6.0/IdateAndCopy.csproj.CoreCompileInputs.cache
+/Users/timurusupov/RiderProjects/IdateAndCopy/IdateAndCopy/obj/Debug/net6.0/IdateAndCopy.dll
+/Users/timurusupov/RiderProjects/IdateAndCopy/IdateAndCopy/obj/Debug/net6.0/refint/IdateAndCopy.dll
+/Users/timurusupov/RiderProjects/IdateAndCopy/IdateAndCopy/obj/Debug/net6.0/IdateAndCopy.pdb
+/Users/timurusupov/RiderProjects/IdateAndCopy/IdateAndCopy/obj/Debug/net6.0/IdateAndCopy.genruntimeconfig.cache
+/Users/timurusupov/RiderProjects/IdateAndCopy/IdateAndCopy/obj/Debug/net6.0/ref/IdateAndCopy.dll

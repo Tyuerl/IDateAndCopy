@@ -1,8 +1,6 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
+using System.Collections;
 using System.Diagnostics;
-using System.Security.Cryptography;
 
 namespace Student
 {
@@ -12,81 +10,20 @@ namespace Student
     {
         static void Main()
         {
-            string s;
-            Student stud_1 = new Student();
-
-            s = stud_1.ToString();
-            Console.WriteLine(s);
-
-            Console.WriteLine((int) 3.9);
-            Console.WriteLine(stud_1[Education.Bachelor] + " " + stud_1[Education.Specialist] + " " + stud_1[Education.SecondEducation]);
-
-
-            DateTime dataTim = new DateTime(2002, 3, 13);
-
-
-            Exam[] exams = new Exam[3];
-            exams[0] = new Exam("math", 100, dataTim);
-            exams[1] = new Exam("math1", 10, dataTim);
-            exams[2] = new Exam("math2", 1, dataTim);
-            Person tim = new Person("Temirlan","Yusupov", dataTim);
-            Person tim1 = new Person("Temirlan","Yusupov", dataTim);
-            if (tim.Equals(tim1) == true)
-                Console.WriteLine(tim.GetHashCode() + " ==" + tim1.GetHashCode()); //Check Equals*/
-            stud_1 = new Student();
-            stud_1.AddExams(exams);
-            stud_1.Info = tim;
-            stud_1.Education = Education.Bachelor;
-            stud_1.Group = 63;
-            Console.WriteLine(stud_1.ToString());
-            tim.YearOfbirth = 2022;
-            stud_1.Info.YearOfbirth = 2022;
-            Console.WriteLine(stud_1.ToString());
-
-            Exam[] first = new Exam[1000000];
-            Exam[,] two = new Exam[1000, 1000];
-            Exam[][] three = new Exam[1000][];
-          
-            for (int i = 0; i < three.Length; i++)
-                three[i] = new Exam[1000];
-             var sw = Stopwatch.StartNew();
-
-            //1
-            for (int i = 0; i < 1000000; i++)
-               first[i] = new Exam();
-
-            sw.Stop();
-            Console.WriteLine(sw.Elapsed);
-
-            //2
-            sw = Stopwatch.StartNew();
-
-            for (int i = 0; i < 1000; i++)
-                for (int j = 0; j < 1000; j++)
-                     two[i, j] = new Exam();
-
-            sw.Stop();
-            Console.WriteLine(sw.Elapsed);
-
-            
-            //3
-            sw = Stopwatch.StartNew();
-
-            for (int i = 0; i < 1000; i++)
-            for (int j = 0; j < 1000; j++)
-                three[i][j] = new Exam();
-
-            sw.Stop();
-            Console.WriteLine(sw.Elapsed);
+            Person first = new Person();
+            Person second = new Person();
+            Console.WriteLine("Сравнение :\n 1) На совпадение ссылок: " + ((object)first == (object)second));
+            Console.WriteLine("2) Хеш коды: " + first.GetHashCode() + " == " + second.GetHashCode());
         }
     }
 
     interface IdateAndCopy
     {
-        DateTime Date { get; set;}
-        
+        DateTime Date { get; set; }
+
         object DeepCopy();
     }
+
     class Person : IdateAndCopy
     {
         protected string name;
@@ -127,7 +64,7 @@ namespace Student
 
         public DateTime Date
         {
-            get { return (date);}
+            get { return (date); }
             set { date = value; }
         }
 
@@ -150,7 +87,7 @@ namespace Student
         public override bool Equals(object obj)
         {
             Person temp = (Person) obj;
-            
+
             if (obj.GetType() != this.GetType())
                 return (false);
             if (temp.Name == this.Name && temp.SecondName == this.secondName && temp.Date == this.Date)
@@ -176,14 +113,14 @@ namespace Student
         {
             int hashCode;
 
-            hashCode = this.Date.GetHashCode() + this.Name.GetHashCode() + this.SecondName.GetHashCode() ;
+            hashCode = Date.GetHashCode() + Name.GetHashCode() + SecondName.GetHashCode();
             return (hashCode);
         }
 
         public virtual object DeepCopy()
         {
             Person temp = new Person(name, secondName, date);
-            
+
             return (temp);
 
         }
@@ -215,45 +152,22 @@ namespace Student
         {
             return (Title + " " + IsPass);
         }
-         public string Title
-        {
-            get;
-            set;
-        }
 
-        public bool IsPass
-        {
-            get;
-            set;
-        }
-        
+        public string Title { get; set; }
+
+        public bool IsPass { get; set; }
+
     }
 
     class Exam : IdateAndCopy
     {
-        public string Title
-        {
-            get;
-            set;
-        }
+        public string Title { get; set; }
 
-        public int Mark
-        {
-            get;
-            set;
-        }
+        public int Mark { get; set; }
 
-        public System.DateTime Date_of_exam
-        {
-            get;
-            set;
-        }
+        public System.DateTime Date_of_exam { get; set; }
 
-        public DateTime Date
-        {
-            get;
-            set;
-        }
+        public DateTime Date { get; set; }
 
         public Exam()
         {
@@ -284,14 +198,15 @@ namespace Student
     {
         private Education _education;
         private int _group;
-        private List<Exam> _exam;
+        private ArrayList _exam;
+        private ArrayList _test;
 
         //С помощью ключевого слова base можно вызвать конструктор любой формы, определяемой в базовом классе(предке)
         public Student() : base()
         {
             _education = Education.Bachelor;
             _group = 0;
-            _exam = new List<Exam>();
+            _exam = new ArrayList();
         }
 
         public Student(Person person, Education education, int group)
@@ -299,16 +214,13 @@ namespace Student
         {
             this._education = _education;
             this._group = group;
-            _exam = new List<Exam>();
+            _exam = new ArrayList();
         }
 
 
         public Person Info
         {
-            get 
-            {
-                return ((Person)this);
-            }
+            get { return ((Person) this); }
             set
             {
                 name = value.Name;
@@ -317,46 +229,30 @@ namespace Student
             }
         }
 
-        public DateTime Date
-        { 
-            get;
-            set;
-        }
+        public DateTime Date { get; set; }
 
         public Education Education
         {
-            get
-            {
-                return (_education);
-            }
-            set
-            {
-                _education = value;
-            }
+            get { return (_education); }
+            set { _education = value; }
         }
 
         public int Group
         {
-            get
-            {
-                return (_group);
-            }
+            get { return (_group); }
             set
             {
-                _group = value;
+                if (value <= 599 && value > 100)
+                    _group = value;
+                else
+                    throw new ArgumentOutOfRangeException("Group is not valid");
             }
         }
 
-        public List<Exam> Exams
+        public ArrayList Exams
         {
-            get
-            {
-                return (_exam);
-            }
-            set
-            {
-                _exam = value;
-            }
+            get { return (_exam); }
+            set { _exam = value; }
         }
 
         public double AverageScore
@@ -366,18 +262,20 @@ namespace Student
                 int i;
                 int sumScore;
 
-                for (i = 0, sumScore = 0; i < _exam.Count; i++, sumScore += _exam[i].Mark)
+                sumScore = 0;
+                Exam temp;
+                for (i = 0, sumScore = 0; i < _exam.Count; i++, sumScore += ((Exam)(_exam[i])).Mark)
                     ;
                 if (i == 0)
                     return (i);
-                return ((double)sumScore / i);
+                return ((double) sumScore / i);
             }
         }
 
 
         public bool this[Education i] => i == _education;
 
-        public void AddExams(Exam[] exams)
+        public void AddExams(params Exam[] exams)
         {
             exams.ToList();
             this._exam.AddRange(exams);
@@ -388,7 +286,7 @@ namespace Student
             string s;
 
             s = base.ToString() + " " + _education.ToString() + " " + _group.ToString();
-            foreach (var temp in _exam)
+            foreach (Exam temp in _exam)
                 s += " " + temp.Title;
 
             return (s);
@@ -398,15 +296,41 @@ namespace Student
         {
             string s;
 
-            s = base.ToString() + " " + _education.ToString() + " " + _group.ToString();
+            s = base.ToString() + " " + _education.ToString() + " " + _group.ToString() + " ";
             s += AverageScore.ToString();
 
             return (s);
         }
 
-        public virtual object DeepCopy()
+        public object DeepCopy()
         {
-            return (1);
+            Person a = new Person(name, secondName, date);
+            Student temp = new Student(a, _education, _group);
+            ArrayList examines1 = new ArrayList();
+            ArrayList test1 = new ArrayList();
+
+            foreach (var going in _exam)
+                examines1.Add(going);
+            foreach (var going in _exam)
+                test1.Add(going);
+            temp.Exams = examines1;
+            return (temp);
         }
+
+        public IEnumerable GetExamTest()
+        {
+            foreach (Exam temp in _exam)
+                yield return temp;
+            foreach (Exam temp in _test)
+                yield return temp;            
+        }
+
+        public IEnumerable GetExamMoreThan(int mark)
+        {
+            foreach (Exam going in _exam)
+                if (going.Mark > mark)
+                    yield return going;
+        }
+        
     }
 }

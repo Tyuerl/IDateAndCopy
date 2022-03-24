@@ -6,11 +6,15 @@
   <component name="ChangeListManager">
     <list default="true" id="db509af1-9d78-4d9a-8bbf-78dce47b445e" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.IdateAndCopy/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.IdateAndCopy/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/IdateAndCopy/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/IdateAndCopy/Program.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/ca1f4e14be0845fb96a1382104e460609e8800/34/6a6dfcc0/IEnumerable`1.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -56,7 +60,11 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1647972671781</updated>
-      <workItem from="1647972671785" duration="1907000" />
+      <workItem from="1647972671785" duration="4143000" />
+      <workItem from="1648020134989" duration="658000" />
+      <workItem from="1648020933000" duration="2935000" />
+      <workItem from="1648030193387" duration="159000" />
+      <workItem from="1648078301263" duration="4493000" />
     </task>
     <servers />
   </component>
@@ -64,7 +72,7 @@
     <option name="version" value="3" />
   </component>
   <component name="UnityCheckinConfiguration" checkUnsavedScenes="true" />
-  <component name="UnityProjectConfiguration" hasMinimizedUI="null" />
+  <component name="UnityProjectConfiguration" hasMinimizedUI="false" />
   <component name="UnityUnitTestConfiguration" currentTestLauncher="NUnit" />
   <component name="VcsManagerConfiguration">
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
