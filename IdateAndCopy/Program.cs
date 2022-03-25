@@ -14,6 +14,33 @@ namespace Student
             Person second = new Person();
             Console.WriteLine("Сравнение :\n 1) На совпадение ссылок: " + ((object)first == (object)second));
             Console.WriteLine("2) Хеш коды: " + first.GetHashCode() + " == " + second.GetHashCode());
+            
+            DateTime summer = new DateTime(2022, 6, 13);
+            Exam exam1 = new Exam("math", 99, summer);
+            Exam exam2 = new Exam("bzd", 99, summer);
+            Exam exam3 = new Exam("algem", 99, summer);
+            Test test1 = new Test("colloquim", true);
+            Student ivan = new Student(first, Education.Bachelor, 123);
+            ivan.AddExams(exam1, exam2, exam3);
+            ivan.AddTest(test1);
+            Console.WriteLine(ivan.Info.ToString());
+            var maxim = ivan.DeepCopy();
+            ivan.AddExams(exam3);
+            Console.WriteLine(ivan.ToString() + "\n"+ maxim.ToString());
+
+            try
+            {
+                ivan.Group = 700232;
+            }
+            catch(ArgumentOutOfRangeException e)
+            {
+                Console.WriteLine(e.Message);
+            }
+            
+            foreach (Test adsf in ivan.GetExamMoreThan(12))
+            {
+               // Console.WriteLine(in.ToString());
+            }
         }
     }
 
@@ -207,6 +234,7 @@ namespace Student
             _education = Education.Bachelor;
             _group = 0;
             _exam = new ArrayList();
+            _test = new ArrayList();
         }
 
         public Student(Person person, Education education, int group)
@@ -215,6 +243,8 @@ namespace Student
             this._education = _education;
             this._group = group;
             _exam = new ArrayList();
+            _test = new ArrayList();
+
         }
 
 
@@ -277,8 +307,14 @@ namespace Student
 
         public void AddExams(params Exam[] exams)
         {
-            exams.ToList();
-            this._exam.AddRange(exams);
+            foreach (var temp in exams)
+                _exam.Add(temp);
+        }
+
+        public void AddTest(params Test[] test)
+        {
+            foreach (var temp in test)
+                _test.Add(temp);
         }
 
         public override string ToString()
@@ -287,7 +323,7 @@ namespace Student
 
             s = base.ToString() + " " + _education.ToString() + " " + _group.ToString();
             foreach (Exam temp in _exam)
-                s += " " + temp.Title;
+                s += " " + temp.ToString();
 
             return (s);
         }

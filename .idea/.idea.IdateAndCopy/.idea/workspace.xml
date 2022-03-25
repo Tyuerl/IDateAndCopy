@@ -7,6 +7,12 @@
     <list default="true" id="db509af1-9d78-4d9a-8bbf-78dce47b445e" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.IdateAndCopy/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.IdateAndCopy/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/IdateAndCopy/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/IdateAndCopy/Program.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/IdateAndCopy/bin/Debug/net6.0/IdateAndCopy.dll" beforeDir="false" afterPath="$PROJECT_DIR$/IdateAndCopy/bin/Debug/net6.0/IdateAndCopy.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/IdateAndCopy/bin/Debug/net6.0/IdateAndCopy.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/IdateAndCopy/bin/Debug/net6.0/IdateAndCopy.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/IdateAndCopy/obj/Debug/net6.0/IdateAndCopy.dll" beforeDir="false" afterPath="$PROJECT_DIR$/IdateAndCopy/obj/Debug/net6.0/IdateAndCopy.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/IdateAndCopy/obj/Debug/net6.0/IdateAndCopy.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/IdateAndCopy/obj/Debug/net6.0/IdateAndCopy.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/IdateAndCopy/obj/Debug/net6.0/ref/IdateAndCopy.dll" beforeDir="false" afterPath="$PROJECT_DIR$/IdateAndCopy/obj/Debug/net6.0/ref/IdateAndCopy.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/IdateAndCopy/obj/Debug/net6.0/refint/IdateAndCopy.dll" beforeDir="false" afterPath="$PROJECT_DIR$/IdateAndCopy/obj/Debug/net6.0/refint/IdateAndCopy.dll" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -14,7 +20,10 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="HighlightingSettingsPerFile">
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/e681eaf56f9463a63a21961ee7e17384babccfe0a9414159f42991ff56ee61/ArrayList.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/a189637ee62ade5a353f967e8f9214fb749ea16c9375dc6d2b6df37388f81/CastHelpers.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/ca1f4e14be0845fb96a1382104e460609e8800/34/6a6dfcc0/IEnumerable`1.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/ca1f4e14be0845fb96a1382104e460609e8800/17/f9a73b86/CastHelpers.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -64,7 +73,8 @@
       <workItem from="1648020134989" duration="658000" />
       <workItem from="1648020933000" duration="2935000" />
       <workItem from="1648030193387" duration="159000" />
-      <workItem from="1648078301263" duration="4493000" />
+      <workItem from="1648078301263" duration="4603000" />
+      <workItem from="1648198397381" duration="4220000" />
     </task>
     <servers />
   </component>
@@ -76,5 +86,29 @@
   <component name="UnityUnitTestConfiguration" currentTestLauncher="NUnit" />
   <component name="VcsManagerConfiguration">
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/IdateAndCopy/Program.cs</url>
+          <line>15</line>
+          <properties documentPath="$PROJECT_DIR$/IdateAndCopy/Program.cs" initialLine="15" containingFunctionPresentation="method 'Main'">
+            <startOffsets>
+              <option value="380" />
+            </startOffsets>
+            <endOffsets>
+              <option value="469" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+    <pin-to-top-manager>
+      <pinned-members>
+        <PinnedItemInfo parentTag="Frame#Student.Student.AddExams" memberName="exams" />
+      </pinned-members>
+    </pin-to-top-manager>
   </component>
 </project>
