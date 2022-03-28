@@ -28,6 +28,9 @@
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
+  <component name="ProblemsViewState">
+    <option name="selectedTabId" value="CurrentFile" />
+  </component>
   <component name="ProjectId" id="26kflKlK6oUmOJO4GCC1j01d4Rt" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
@@ -74,7 +77,9 @@
       <workItem from="1648020933000" duration="2935000" />
       <workItem from="1648030193387" duration="159000" />
       <workItem from="1648078301263" duration="4603000" />
-      <workItem from="1648198397381" duration="4220000" />
+      <workItem from="1648198397381" duration="9633000" />
+      <workItem from="1648496529925" duration="276000" />
+      <workItem from="1648496880977" duration="2931000" />
     </task>
     <servers />
   </component>
@@ -88,23 +93,6 @@
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
   </component>
   <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="DotNet Breakpoints">
-          <url>file://$PROJECT_DIR$/IdateAndCopy/Program.cs</url>
-          <line>15</line>
-          <properties documentPath="$PROJECT_DIR$/IdateAndCopy/Program.cs" initialLine="15" containingFunctionPresentation="method 'Main'">
-            <startOffsets>
-              <option value="380" />
-            </startOffsets>
-            <endOffsets>
-              <option value="469" />
-            </endOffsets>
-          </properties>
-          <option name="timeStamp" value="1" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
     <pin-to-top-manager>
       <pinned-members>
         <PinnedItemInfo parentTag="Frame#Student.Student.AddExams" memberName="exams" />
