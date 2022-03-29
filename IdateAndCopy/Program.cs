@@ -15,7 +15,7 @@ namespace Student
             Person first = new Person();
             Person second = new Person();
             Console.WriteLine("Сравнение :\n1) На совпадение ссылок: " + ReferenceEquals(first, second));
-            Console.WriteLine("2) Хеш коды: " + (first == second));
+            Console.WriteLine("2) Хеш коды: " + first.GetHashCode() +  second.GetHashCode()); // bcghfdbnm
             
             DateTime summer = new DateTime(2022, 6, 13);
             Exam exam1 = new Exam("math", 99, summer);
@@ -58,7 +58,10 @@ namespace Student
                 Console.Write(" " + going.Title);
             }
             
-            Console.WriteLine("\n8) all tests.title == exam.title");
+            Console.WriteLine("\n8) all  tests.title == exam.title");
+            foreach (string title in ivan)
+                Console.Write(" " + title);
+            Console.WriteLine("||");
             foreach (string title in ivan)
                 Console.Write(" " + title);
             Console.WriteLine("\n9) all passed exams and tests");
@@ -72,7 +75,11 @@ namespace Student
             Console.WriteLine("\n10) all tests with passed exams");
             foreach (Test going in ivan.GetTestWithPassEx())
                 Console.Write(" " + going.Title);
-            
+            Student timur = new Student();
+            timur.AddExams(exam1, exam2, exam3);
+            Student ahad = (Student)timur.DeepCopy();
+            ((Exam) (ahad.Exams[0])).Mark = 55;
+            Console.WriteLine("\nTImur and Ahad"  + timur.ToString() + "\n" + ahad.ToString());
         }
     }
 
@@ -240,7 +247,7 @@ namespace Student
 
         public object DeepCopy()
         {
-            return (1);
+            return (new Exam(Title, Mark, Date));
         }
     }
 
@@ -353,7 +360,7 @@ namespace Student
         public override string ToString()
         {
             string s;
-
+            // stringbuilder
             s = base.ToString() + " " + _education.ToString() + " " + _group.ToString();
             foreach (Exam temp in _exam)
                 s += " " + temp.ToString();
@@ -373,17 +380,25 @@ namespace Student
             return (s);
         }
 
-        public object DeepCopy()
+        public object DeepCopy() // переделать
         {
             Person a = new Person(name, secondName, date);
             Student temp = new Student(a, _education, _group);
             ArrayList examines1 = new ArrayList();
             ArrayList test1 = new ArrayList();
 
-            foreach (var going in _exam)
-                examines1.Add(going);
-            foreach (var going in _test)
+            foreach (Exam going in _exam)
+            {
+                Exam temper = (Exam)going.DeepCopy();
+                examines1.Add(temper);
+            }
+
+            foreach (Test going in _test)
+            {
+                Test temper = new Test(going.Title, going.IsPass);
                 test1.Add(going);
+            }
+
             temp.Exams = examines1;
             temp.Test = test1;
             return (temp);
@@ -394,7 +409,7 @@ namespace Student
             foreach (object temp in _exam)
                 yield return temp;
             foreach (object temp in _test)
-                yield return temp;            
+                yield return temp;      
         }
 
         public IEnumerable GetExamMoreThan(int mark)

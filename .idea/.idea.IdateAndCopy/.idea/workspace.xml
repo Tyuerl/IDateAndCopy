@@ -11,8 +11,6 @@
       <change beforePath="$PROJECT_DIR$/IdateAndCopy/bin/Debug/net6.0/IdateAndCopy.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/IdateAndCopy/bin/Debug/net6.0/IdateAndCopy.pdb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/IdateAndCopy/obj/Debug/net6.0/IdateAndCopy.dll" beforeDir="false" afterPath="$PROJECT_DIR$/IdateAndCopy/obj/Debug/net6.0/IdateAndCopy.dll" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/IdateAndCopy/obj/Debug/net6.0/IdateAndCopy.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/IdateAndCopy/obj/Debug/net6.0/IdateAndCopy.pdb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/IdateAndCopy/obj/Debug/net6.0/ref/IdateAndCopy.dll" beforeDir="false" afterPath="$PROJECT_DIR$/IdateAndCopy/obj/Debug/net6.0/ref/IdateAndCopy.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/IdateAndCopy/obj/Debug/net6.0/refint/IdateAndCopy.dll" beforeDir="false" afterPath="$PROJECT_DIR$/IdateAndCopy/obj/Debug/net6.0/refint/IdateAndCopy.dll" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -79,7 +77,8 @@
       <workItem from="1648078301263" duration="4603000" />
       <workItem from="1648198397381" duration="9633000" />
       <workItem from="1648496529925" duration="276000" />
-      <workItem from="1648496880977" duration="2931000" />
+      <workItem from="1648496880977" duration="3290000" />
+      <workItem from="1648538846816" duration="2461000" />
     </task>
     <servers />
   </component>
